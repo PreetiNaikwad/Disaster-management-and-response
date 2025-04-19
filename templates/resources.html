@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resources</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Relief Resources</h1>
+    <form action="{{ url_for('add_resource') }}" method="POST">
+        <input type="text" name="resource_name" placeholder="Resource Name">
+        <input type="number" name="quantity" placeholder="Quantity">
+        <input type="text" name="location" placeholder="Location">
+        <button type="submit">Add Resource</button>
+    </form>
+    <ul>
+        {% for resource in resources %}
+            <li>{{ resource[1] }} - {{ resource[2] }} - {{ resource[3] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

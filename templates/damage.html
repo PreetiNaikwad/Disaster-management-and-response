@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Damage</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Report Damage</h1>
+    <form action="{{ url_for('submit_damage') }}" method="POST">
+        <input type="text" name="reporter_name" placeholder="Name">
+        <input type="text" name="location" placeholder="Location">
+        <textarea name="description" placeholder="Description"></textarea>
+        <button type="submit">Report</button>
+    </form>
+</body>
+</html>

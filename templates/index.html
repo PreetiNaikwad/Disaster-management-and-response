@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disaster Alerts</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Real-time Disaster Alerts</h1>
+    <p>
+        <button onclick="window.location.href='{{ url_for('sos') }}'">SOS</button> |
+        <button onclick="window.location.href='{{ url_for('volunteers') }}'">Volunteers</button> |
+        <button onclick="window.location.href='{{ url_for('resources') }}'">Resources</button> |
+        <button onclick="window.location.href='{{ url_for('damage') }}'">Damage</button> |
+        <button onclick="window.location.href='{{ url_for('resources_and_contacts') }}'">Contact Details</button> |
+        <button onclick="window.location.href='{{ url_for('map') }}'">Map</button> |
+        
+    </p>
+
+    <form action="{{ url_for('add_alert') }}" method="POST">
+        <input type="text" name="alert" placeholder="New Alert">
+        <button type="submit">Add Alert</button>
+    </form>
+    <ul>
+        {% for alert in alerts %}
+            <li>{{ alert[1] }} - {{ alert[2] }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

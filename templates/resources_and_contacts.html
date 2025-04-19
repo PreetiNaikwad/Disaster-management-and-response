@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodagu Local Disaster Management Resources and Contacts</title>
+</head>
+<body>
+    <h1>Kodagu Local Disaster Management Resources and Contacts</h1>
+
+    <h2>Government Agencies and Contacts</h2>
+    <h3>{{ kodagu_district_disaster_management_authority.name }}</h3>
+    <p>Address: {{ kodagu_district_disaster_management_authority.address }}</p>
+    <p>Phone: {{ kodagu_district_disaster_management_authority.phone }}</p>
+    <p>Email: <a href="mailto:{{ kodagu_district_disaster_management_authority.email }}">{{ kodagu_district_disaster_management_authority.email }}</a></p>
+    <p>Website: <a href="{{ kodagu_district_disaster_management_authority.website }}">{{ kodagu_district_disaster_management_authority.website }}</a></p>
+
+    <h3>{{ karnataka_state_disaster_management_authority.name }}</h3>
+    <p>Address: {{ karnataka_state_disaster_management_authority.address }}</p>
+    <p>Phone: {{ karnataka_state_disaster_management_authority.phone }}</p>
+    <p>Email: <a href="mailto:{{ karnataka_state_disaster_management_authority.email }}">{{ karnataka_state_disaster_management_authority.email }}</a></p>
+    <p>Website: <a href="{{ karnataka_state_disaster_management_authority.website }}">{{ karnataka_state_disaster_management_authority.website }}</a></p>
+
+    <h2>Emergency Services</h2>
+    <h3>Police</h3>
+    <p>Emergency Number: {{ police.emergency_number }}</p>
+    <p>Kodagu District Police Headquarters</p>
+    <p>Phone: {{ police.kodagu_district_police_headquarters.phone }}</p>
+    <p>Website: <a href="{{ police.kodagu_district_police_headquarters.website }}">{{ police.kodagu_district_police_headquarters.website }}</a></p>
+
+    <h3>Fire Department</h3>
+    <p>Emergency Number: {{ fire_department.emergency_number }}</p>
+    <p>Madikeri Fire Station</p>
+    <p>Phone: {{ fire_department.madikeri_fire_station.phone }}</p>
+
+    <h3>Medical Services</h3>
+    <p>Emergency Number: {{ medical_services.emergency_number }}</p>
+    <p>Kodagu Institute of Medical Sciences</p>
+    <p>Address: {{ medical_services.kodagu_institute_of_medical_sciences.address }}</p>
+    <p>Phone: {{ medical_services.kodagu_institute_of_medical_sciences.phone }}</p>
+    <p>Website: <a href="{{ medical_services.kodagu_institute_of_medical_sciences.website }}">{{ medical_services.kodagu_institute_of_medical_sciences.website }}</a></p>
+
+    <h2>Community Organizations</h2>
+    <h3>Kodagu Relief and Rehabilitation Trust</h3>
+    <p>Contact Person: {{ kodagu_relief_and_rehabilitation_trust.contact_person }}</p>
+    <p>Phone: {{ kodagu_relief_and_rehabilitation_trust.phone }}</p>
+    <p>Email: <a href="mailto:{{ kodagu_relief_and_rehabilitation_trust.email }}">{{ kodagu_relief_and_rehabilitation_trust.email }}</a></p>
+    <p>Website: <a href="{{ kodagu_relief_and_rehabilitation_trust.website }}">{{ kodagu_relief_and_rehabilitation_trust.website }}</a></p>
+
+    <h3>Coorg Wellness Foundation</h3>
+    <p>Contact Person: {{ coorg_wellness_foundation.contact_person }}</p>
+    <p>Phone: {{ coorg_wellness_foundation.phone }}</p>
+    <p>Email: <a href="mailto:{{ coorg_wellness_foundation.email }}">{{ coorg_wellness_foundation.email }}</a></p>
+    <p>Website: <a href="{{ coorg_wellness_foundation.website }}">{{ coorg_wellness_foundation.website }}</a></p>
+
+    <h2>Online Resources</h2>
+    <p>National Disaster Management Authority: <a href="{{ online_resources.national_disaster_management_authority }}">{{ online_resources.national_disaster_management_authority }}</a></p>
+    <p>Karnataka State Disaster Management Authority: <a href="{{ online_resources.karnataka_state_disaster_management_authority }}">{{ online_resources.karnataka_state_disaster_management_authority }}</a></p>
+    <p>Kodagu District Administration: <a href="{{ online_resources.kodagu_district_administration }}">{{ online_resources.kodagu_district_administration }}</a></p>
+
+    <h2>Local Shelters and Relief Centers</h2>
+    <h3>Madikeri Relief Center</h3>
+    <p>Address: {{ madikeri_relief_center.address }}</p>
+    <p>Phone: {{ madikeri_relief_center.phone }}</p>
+
+    <h3>Kushalnagar Shelter</h3>
+    <p>Address: {{ kushalnagar_shelter.address }}</p>
+    <p>Phone: {{ kushalnagar_shelter.phone }}</p>
+
+    <h3>Virajpet Relief Center</h3>
+    <p>Address: {{ virajpet_relief_center.address }}</p>
+    <p>Phone: {{ virajpet_relief_center.phone }}</p>
+</body>
+</html>

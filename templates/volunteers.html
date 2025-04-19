@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteers</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Volunteers and NGOs</h1>
+    <form action="{{ url_for('add_volunteer') }}" method="POST">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="contact" placeholder="Contact">
+        <input type="text" name="ngo" placeholder="NGO">
+        <button type="submit">Add Volunteer</button>
+    </form>
+    <ul>
+        {% for volunteer in volunteers %}
+            <li>{{ volunteer[1] }} - {{ volunteer[2] }} - {{ volunteer[3] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
